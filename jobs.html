@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elysium RP — Jobs</title>
+  <link rel="stylesheet" href="style.css" />     <!-- style global (header, couleurs) -->
+  <link rel="stylesheet" href="jobs.css" />      <!-- style spécifique jobs -->
+</head>
+<body>
+  <!-- HEADER (identique aux autres pages) -->
+  <header class="header">
+    <div class="logo">ELYSIUM</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="reglement.html">Règlement</a></li>
+        <li><a href="patch.html">Patch Notes</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a class="active" href="jobs.html">Jobs</a></li>
+        <li><a href="boutique.html">Boutique</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-slim">
+    <div class="hero-inner">
+      <h1>💼 Jobs & Gangs</h1>
+      <p>Choisis ton camp — légal ou illégal. Clique sur un pôle pour voir les activités disponibles.</p>
+    </div>
+  </section>
+
+  <!-- TABS -->
+  <main class="jobs-container">
+    <div class="tabs">
+      <button class="tab-btn active" data-target="legal">Pôle Légal</button>
+      <button class="tab-btn" data-target="illegal">Pôle Illégal</button>
+    </div>
+
+    <!-- CONTENU POLES -->
+    <section id="legal" class="tab-panel active">
+      <h2>Entreprises & Jobs légaux</h2>
+      <div class="jobs-grid">
+        <article class="job-card">
+          <img src="images/jobs/police.png" alt="Police">
+          <h3>Police (LSPD)</h3>
+          <p>Maintient l'ordre, enquêtes, patrouilles et interventions RP.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/ems.png" alt="EMS">
+          <h3>EMS / Ambulance</h3>
+          <p>Sauvetage, soins, évacuations et soutien médical RP.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/mecano.png" alt="Mécano">
+          <h3>Mécano</h3>
+          <p>Réparations, garage, remorquage et custom véhicules.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/autoecole.png" alt="Auto-école">
+          <h3>Auto-École</h3>
+          <p>Donne les licences (voiture, moto, camion) et formations.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="illegal" class="tab-panel">
+      <h2>Gangs & activités illégales</h2>
+      <div class="jobs-grid">
+        <article class="job-card">
+          <img src="images/jobs/gang1.png" alt="Gang">
+          <h3>Gang — Hors loi</h3>
+          <p>Vols, braquages, trafic et organisation de groupes.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/blackmarket.png" alt="Marché noir">
+          <h3>Marché Noir</h3>
+          <p>Vente illégale, contournement et contacts douteux.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/drugs.png" alt="Drogue">
+          <h3>Trafic de drogues</h3>
+          <p>Production et distribution avec risques RP.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/hacker.png" alt="Hacker">
+          <h3>Hacker</h3>
+          <p>Intrusion, piratage et missions numériques illégales.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Tab switching simple
+    document.querySelectorAll('.tab-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=> {
+        // active btn
+        document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        // panels
+        const target = btn.dataset.target;
+        document.querySelectorAll('.tab-panel').forEach(panel=>{
+          panel.classList.toggle('active', panel.id === target);
+        });
+        // scroll to content (optional)
+        document.querySelector('.jobs-container').scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
