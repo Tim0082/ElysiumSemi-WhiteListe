@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elysium RP — Règlement</title>
+  <!-- CSS global du site -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- CSS spécifique Règlement -->
+  <link rel="stylesheet" href="reglement.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">ELYSIUM</div>
+    <nav class="navbar">
+      <ul>
+      <li><a href="index.html">Accueil</a></li>
+        <li><a href="reglement.html">Règlement</a></li>
+        <li><a href="patch.html">Patch Notes</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a class="active" href="jobs.html">Jobs</a></li>
+        <li><a href="boutique.html">Boutique</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO / EN-TÊTE DE PAGE -->
+  <section class="reg-hero">
+    <div class="reg-hero-bg"></div>
+    <div class="reg-hero-inner">
+      <h1>📜 Règlement Elysium RP</h1>
+      <p>Merci de lire l’ensemble des règles avant de rejoindre l’aventure.</p>
+    </div>
+  </section>
+
+  <!-- CONTENU -->
+  <main class="reg-container">
+    <!-- Sommaire -->
+    <aside class="reg-toc">
+      <h3>Sommaire</h3>
+      <a href="#conduct">1. Conduite & Respect</a>
+      <a href="#fairplay">2. Fair-Play (No PG / MG / Cheat)</a>
+      <a href="#rp">3. Qualité RP & Peur de la Mort</a>
+      <a href="#crime">4. Illégal & Armes</a>
+      <a href="#com">5. Communication & Discord</a>
+      <a href="#sanctions">6. Sanctions</a>
+    </aside>
+
+    <!-- Règles (accordéons) -->
+    <section class="reg-content">
+      <!-- Bloc -->
+      <div id="conduct" class="reg-block">
+        <button class="reg-acc-head">1. Conduite & Respect</button>
+        <div class="reg-acc-body">
+          <ul>
+            <li>Respect absolu entre joueurs et envers le staff (0 toxicité, 0 harcèlement).</li>
+            <li>Langage raciste, homophobe, sexiste ou discriminatoire : <strong>interdit</strong>.</li>
+            <li>Respecte les scènes en cours : pas d’interruption volontaire sans raison RP.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="fairplay" class="reg-block">
+        <button class="reg-acc-head">2. Fair-Play (No Powergaming / Metagaming / Cheat)</button>
+        <div class="reg-acc-body">
+          <ul>
+            <li><strong>Powergaming</strong> : actions irréalistes/abus des mécaniques → interdit.</li>
+            <li><strong>Metagaming</strong> : utiliser des infos hors RP (streams, Discord) → interdit.</li>
+            <li><strong>Cheat/Exploit</strong> : tolérance zéro, ban immédiat.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="rp" class="reg-block">
+        <button class="reg-acc-head">3. Qualité RP & Peur de la Mort</button>
+        <div class="reg-acc-body">
+          <ul>
+            <li>Le <strong>Fear RP</strong> est obligatoire : ta vie compte, agis en conséquence.</li>
+            <li>Valorise la cohérence : blessures, fatigue, risques → jouent sur tes actions.</li>
+            <li>Pas de troll RP / scènes absurdes visant à nuire à l’immersion.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="crime" class="reg-block">
+        <button class="reg-acc-head">4. Illégal & Armes</button>
+        <div class="reg-acc-body">
+          <ul>
+            <li>Actions illégales : prépare, roleplay, accepte les conséquences.</li>
+            <li>Armes : usage proportionné, <strong>pas</strong> de RDM/VDM.</li>
+            <li>Vol/escroquerie : encadré par le staff si abus manifeste.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="com" class="reg-block">
+        <button class="reg-acc-head">5. Communication & Discord</button>
+        <div class="reg-acc-body">
+          <ul>
+            <li>Discord obligatoire : annonces, supports et candidatures.</li>
+            <li>En jeu : utilise le vocal de manière RP (pas de hors-sujet en pleine scène).</li>
+            <li>Enregistrements/streams : respect des règles RP et des personnes présentes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="sanctions" class="reg-block">
+        <button class="reg-acc-head">6. Sanctions</button>
+        <div class="reg-acc-body">
+          <ul>
+            <li>Avertissement → Kick → Ban temporaire → Ban définitif (selon gravité/récidive).</li>
+            <li>Le staff se réserve le droit d’intervenir pour préserver l’expérience RP.</li>
+            <li>Conteste via ticket Discord avec preuves (captures, clips).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lien Discord -->
+      <div class="reg-callout">
+        <p>Des questions ? Rejoins le Discord :</p>
+        <a class="btn" target="_blank" href="https://discord.gg/tZ6ZNm9A">📩 Ouvrir le Discord</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Accordéon simple (sans dépendances)
+    document.querySelectorAll('.reg-acc-head').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('open');
+        const body = btn.nextElementSibling;
+        if (btn.classList.contains('open')) {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          body.style.padding = '14px 18px';
+        } else {
+          body.style.maxHeight = null;
+          body.style.padding = '0 18px';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
