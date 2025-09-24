@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elysium RP — Patch Notes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="patch.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">ELYSIUM</div>
+    <nav class="navbar">
+      <ul>
+         <li><a href="index.html">Accueil</a></li>
+        <li><a href="reglement.html">Règlement</a></li>
+        <li><a href="patch.html">Patch Notes</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a class="active" href="jobs.html">Jobs</a></li>
+        <li><a href="boutique.html">Boutique</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENU -->
+  <main class="page">
+    <h1>📝 Patch Notes</h1>
+
+    <div class="patch">
+      <h2>v1.3.0 <span>(24/09/2025)</span></h2>
+      <ul>
+        <li>Ajout du choix et visuel des mappings</li>
+        <li>Ajout du choix et visuel des interactions joueurs</li>
+        <li>Mise à jour des permissions staff</li>
+      </ul>
+    </div>
+
+    <div class="patch">
+      <h2>v1.2.0 <span>(15/09/2025)</span></h2>
+      <ul>
+        <li>Optimisation des performances</li>
+        <li>Ajout de nouvelles voitures d’auto-école</li>
+        <li>Correction de bugs mineurs</li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
