@@ -1,0 +1,48 @@
+/* === STAFF PAGE === */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.staff-card {
+  background: #061943;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(27,83,255,0.3);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  aspect-ratio: 1 / 1; /* carré parfait */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.staff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 16px rgba(27,83,255,0.6);
+}
+
+.staff-card h3 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.staff-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #1b53ff;
+  margin: 15px 0;
+  box-shadow: 0 0 10px rgba(27,83,255,0.5);
+}
+
+.staff-card p {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Couleurs par rôle */
+.fondateur h3, .fondateur p { color: #FFD700; } /* Or */
+.dev h3, .dev p { color: #1b53ff; } /* Bleu */
