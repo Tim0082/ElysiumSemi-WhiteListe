@@ -1,0 +1,115 @@
+/* Page Règlement — couleurs Elysium */
+:root{
+  --bg:#0a0f2c;
+  --panel:#061943;
+  --ink:#ffffff;
+  --muted:#cfd7ff;
+  --blue:#1b53ff;
+  --blue-2:#4f7dff;
+}
+
+/* Hero */
+.reg-hero{
+  position: relative;
+  margin-top: 70px;           /* espace sous le header fixe */
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.reg-hero-bg{
+  position:absolute; inset:0;
+  background: linear-gradient(120deg, rgba(27,83,255,.25), rgba(10,15,44,.6), rgba(27,83,255,.2));
+  filter: blur(60px);
+  animation: heroMove 16s ease-in-out infinite;
+}
+@keyframes heroMove{
+  0%{ transform: translateX(-10%) }
+  50%{ transform: translateX(10%) }
+  100%{ transform: translateX(-10%) }
+}
+.reg-hero-inner{ position: relative; z-index: 2; }
+.reg-hero h1{
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 0 0 10px 0;
+  color: var(--ink);
+  text-shadow: 0 0 12px rgba(27,83,255,.5);
+}
+.reg-hero p{ color: var(--muted); margin: 0 }
+
+/* Layout */
+.reg-container{
+  max-width: 1200px;
+  margin: 30px auto 80px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 22px;
+}
+@media (max-width: 980px){
+  .reg-container{ grid-template-columns: 1fr; }
+}
+
+/* Sommaire */
+.reg-toc{
+  position: sticky; top: 90px;
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  padding: 16px;
+  height: fit-content;
+  box-shadow: 0 0 14px rgba(27,83,255,.25);
+}
+.reg-toc h3{
+  margin: 0 0 10px 0; font-size: 16px; letter-spacing:.4px; color: var(--muted);
+}
+.reg-toc a{
+  display:block; padding:10px 12px; border-radius:8px; color:#e9edff;
+  text-decoration:none; margin-bottom:6px; transition:.25s;
+}
+.reg-toc a:hover{ background: rgba(27,83,255,.15); color: var(--blue-2); }
+
+/* Contenu */
+.reg-content{ display: grid; gap: 14px; }
+.reg-block{
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 14px rgba(27,83,255,.18);
+}
+
+/* Accordéon */
+.reg-acc-head{
+  width:100%; text-align:left; border:0; cursor:pointer;
+  background: transparent; color: var(--ink);
+  padding: 16px 18px; font-weight: 800; letter-spacing:.2px;
+  display:flex; align-items:center; justify-content:space-between;
+  transition: background .25s, color .25s;
+}
+.reg-acc-head::after{
+  content: "▸"; opacity:.8; transform: rotate(0deg); transition: transform .25s;
+}
+.reg-acc-head.open{ background: rgba(27,83,255,.12); color: var(--blue-2); }
+.reg-acc-head.open::after{ transform: rotate(90deg); }
+
+.reg-acc-body{
+  max-height: 0; padding: 0 18px;
+  overflow: hidden; background: #0d1436; color: #dfe6ff;
+  transition: max-height .35s ease, padding .35s ease;
+}
+.reg-acc-body ul{ padding-left: 18px; margin: 8px 0; }
+.reg-acc-body li{ margin: 6px 0; }
+
+/* Callout Discord */
+.reg-callout{
+  margin-top: 14px; text-align:center; padding: 18px;
+  background: linear-gradient(180deg, rgba(27,83,255,.12), rgba(27,83,255,.08));
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+}
+.btn{
+  display:inline-block; padding:12px 20px; border-radius:999px;
+  background: var(--blue); color:#fff; font-weight:800; letter-spacing:.2px;
+  box-shadow: 0 0 12px rgba(27,83,255,.45); transition: .25s;
+}
+.btn:hover{ background: var(--blue-2); transform: translateY(-2px); }
