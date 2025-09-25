@@ -276,3 +276,23 @@ ul { list-style: none; }
 }
 .ann-close:hover{ transform: scale(1.05); background: rgba(255,255,255,.2); }
 
+  /* Wrapper logo + joueurs */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Badge joueurs en ligne */
+.players-online {
+  font-size: 0.9em;
+  font-weight: bold;
+  background: rgba(0, 255, 0, 0.15);
+  color: #00ff75;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 0 8px rgba(0,255,117,0.4);
+  white-space: nowrap;
+}
+
+
