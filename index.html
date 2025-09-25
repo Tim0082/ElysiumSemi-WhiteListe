@@ -22,6 +22,22 @@
     </nav>
   </header>
 
+  <!-- Banderole d’annonce -->
+<div class="announcement">
+  <span>🌟 𝗩𝗼𝘁𝗿𝗲 𝗦𝗲𝗿𝘃𝗲𝘂𝗿 𝗘𝗹𝘆𝘀𝗶𝘂𝗺 𝗘𝘀𝘁 𝗘𝗻 𝗖𝗼𝘂𝗿𝘀 𝗗𝗲 𝗖𝗿𝗲𝗮𝘁𝗶𝗼𝗻 — 𝗥𝗲𝘀𝘁𝗲𝘇 𝗕𝗿𝗮𝗻𝗰𝗵é𝘀 🌟</span>
+  <button class="ann-close" aria-label="Fermer">×</button>
+</div>
+
+<script>
+  // Fermer la banderole (optionnel)
+  document.addEventListener('click', e => {
+    if (e.target.matches('.ann-close')) {
+      e.target.parentElement.style.display = 'none';
+    }
+  });
+</script>
+
+
   <!-- HERO -->
 <section class="hero">
   <div class="background-animation"></div>
