@@ -236,3 +236,43 @@ ul { list-style: none; }
 /* Couleurs par rôle */
 .fondateur h3, .fondateur p { color: #FFD700; } /* Or */
 .dev h3, .dev p { color: #1b53ff; } /* Bleu */
+
+
+  /* Banderole d’annonce */
+.announcement{
+  position: sticky;
+  top: 60px;               /* ajuste selon la hauteur de ton header (si header fixe) */
+  z-index: 90;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, rgba(27,83,255,.25), rgba(79,125,255,.35), rgba(27,83,255,.25));
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.announcement span{
+  text-wrap: balance;
+}
+.ann-close{
+  appearance: none;
+  border: 0;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  width: 30px; height: 30px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+.ann-close:hover{ transform: scale(1.05); background: rgba(255,255,255,.2); }
+
