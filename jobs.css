@@ -3,28 +3,23 @@
   display: flex;
   justify-content: center;
   margin: 20px 0;
-  gap: 10px;
 }
 
 .tab-btn {
   padding: 10px 20px;
+  margin: 0 5px;
   border: none;
-  background: #222;
-  color: white;
-  cursor: pointer;
   border-radius: 5px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.tab-btn:hover {
-  background: #444;
-}
-
 .tab-btn.active {
-  background: #b81c1c; /* bouton actif en rouge */
+  background: #b81c1c;
 }
 
-/* PANELS */
 .tab-panel {
   display: none;
   padding: 20px;
@@ -34,44 +29,51 @@
   display: block;
 }
 
-/* GRID JOBS */
+/* JOBS GRID */
 .jobs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  margin-top: 20px;
 }
 
 .job-card {
-  background: #1b1b1b;
+  background: #1a1a1a;
   padding: 15px;
   border-radius: 8px;
   text-align: center;
-  color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 .job-card img {
-  max-width: 100px;
+  max-width: 120px;
   margin-bottom: 10px;
 }
 
 .job-card h3 {
   margin: 10px 0;
+  font-size: 18px;
   color: #f1f1f1;
 }
 
 .job-card p {
   font-size: 14px;
-  color: #bbb;
+  color: #aaa;
 }
 
 .btn.small {
   display: inline-block;
   margin-top: 10px;
   padding: 6px 12px;
-  background: #b81c1c;
-  color: white;
-  border-radius: 5px;
   font-size: 13px;
+  border-radius: 5px;
+  background: #b81c1c;
+  color: #fff;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn.small:hover {
+  background: #e02e2e;
 }
