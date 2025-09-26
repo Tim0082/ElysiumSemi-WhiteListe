@@ -1,4 +1,4 @@
-/* TABS */
+/* --- TABS --- */
 .tabs {
   display: flex;
   justify-content: center;
@@ -21,10 +21,10 @@
 }
 
 .tab-btn.active {
-  background: #b81c1c; /* rouge pour mettre en valeur */
+  background: #b81c1c; /* bouton actif en rouge */
 }
 
-/* PANELS */
+/* --- PANELS --- */
 .tab-panel {
   display: none;
   padding: 20px;
@@ -34,7 +34,7 @@
   display: block;
 }
 
-/* GRID */
+/* --- GRID JOBS --- */
 .jobs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
