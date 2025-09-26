@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
+ lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Elysium RP — Jobs</title>
-  <link rel="stylesheet" href="style.css" />     <!-- style global -->
+  <link rel="stylesheet" href="style.css" />     <!-- style global (header, couleurs) -->
   <link rel="stylesheet" href="jobs.css" />      <!-- style spécifique jobs -->
 </head>
 <body>
-  <!-- HEADER -->
+  <!-- HEADER (identique aux autres pages) -->
   <header class="header">
     <div class="logo">ELYSIUM</div>
     <nav class="navbar">
@@ -27,7 +26,7 @@
   <section class="hero-slim">
     <div class="hero-inner">
       <h1>💼 Jobs & Gangs</h1>
-      <p>Choisis ton camp — légal, illégal ou débute ta carrière au Pôle Emploi.</p>
+      <p>Choisis ton camp — légal ou illégal. Clique sur un pôle pour voir les activités disponibles.</p>
     </div>
   </section>
 
@@ -36,47 +35,70 @@
     <div class="tabs">
       <button class="tab-btn active" data-target="legal">Pôle Légal</button>
       <button class="tab-btn" data-target="illegal">Pôle Illégal</button>
-      <button class="tab-btn" data-target="emploi">Pôle Emploi</button>
     </div>
 
-    <!-- PÔLE LÉGAL -->
+    <!-- CONTENU POLES -->
     <section id="legal" class="tab-panel active">
       <h2>Entreprises & Jobs légaux</h2>
       <div class="jobs-grid">
-        <!-- ... (Police, EMS, Benny's, Auto-école, Burger Shot) ... -->
+        <article class="job-card">
+          <img src="images/jobs/police.png" alt="Police">
+          <h3>Police (LSPD)</h3>
+          <p>Maintient l'ordre, enquêtes, patrouilles et interventions RP.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/ems.png" alt="EMS">
+          <h3>EMS / Ambulance</h3>
+          <p>Sauvetage, soins, évacuations et soutien médical RP.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/mecano.png" alt="Mécano">
+          <h3>Mécano</h3>
+          <p>Réparations, garage, remorquage et custom véhicules.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/autoecole.png" alt="Auto-école">
+          <h3>Auto-École</h3>
+          <p>Donne les licences (voiture, moto, camion) et formations.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
       </div>
     </section>
 
-    <!-- PÔLE ILLÉGAL -->
     <section id="illegal" class="tab-panel">
       <h2>Gangs & activités illégales</h2>
       <div class="jobs-grid">
-        <!-- ... (Gang, Marché Noir, Drogues, Hacker, Ballas, Vagos) ... -->
-      </div>
-    </section>
-
-    <!-- PÔLE EMPLOI -->
-    <section id="emploi" class="tab-panel">
-      <h2>Pôle Emploi — Métiers de départ</h2>
-      <div class="jobs-grid">
         <article class="job-card">
-          <img src="images/jobs/eboueur.png" alt="Éboueur">
-          <h3>Éboueur</h3>
-          <p>Ramasse les déchets de la ville pour garder Los Santos propre.</p>
+          <img src="images/jobs/gang1.png" alt="Gang">
+          <h3>Gang — Hors loi</h3>
+          <p>Vols, braquages, trafic et organisation de groupes.</p>
           <a class="btn small" href="#">En savoir +</a>
         </article>
 
         <article class="job-card">
-          <img src="images/jobs/livreur.png" alt="Livreur">
-          <h3>Livreur</h3>
-          <p>Effectue des livraisons rapides à scooter ou fourgonnette.</p>
+          <img src="images/jobs/blackmarket.png" alt="Marché noir">
+          <h3>Marché Noir</h3>
+          <p>Vente illégale, contournement et contacts douteux.</p>
           <a class="btn small" href="#">En savoir +</a>
         </article>
 
         <article class="job-card">
-          <img src="images/jobs/camionneur.png" alt="Camionneur">
-          <h3>Camionneur</h3>
-          <p>Transport de marchandises à travers la ville et au-delà.</p>
+          <img src="images/jobs/drugs.png" alt="Drogue">
+          <h3>Trafic de drogues</h3>
+          <p>Production et distribution avec risques RP.</p>
+          <a class="btn small" href="#">En savoir +</a>
+        </article>
+
+        <article class="job-card">
+          <img src="images/jobs/hacker.png" alt="Hacker">
+          <h3>Hacker</h3>
+          <p>Intrusion, piratage et missions numériques illégales.</p>
           <a class="btn small" href="#">En savoir +</a>
         </article>
       </div>
@@ -84,18 +106,21 @@
   </main>
 
   <script>
-    // Gestion des onglets
+    // Tab switching simple
     document.querySelectorAll('.tab-btn').forEach(btn=>{
       btn.addEventListener('click', ()=> {
+        // active btn
         document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
         btn.classList.add('active');
+        // panels
         const target = btn.dataset.target;
         document.querySelectorAll('.tab-panel').forEach(panel=>{
           panel.classList.toggle('active', panel.id === target);
         });
+        // scroll to content (optional)
         document.querySelector('.jobs-container').scrollIntoView({behavior:'smooth', block:'start'});
       });
     });
   </script>
 </body>
-</html>
+</html>  
