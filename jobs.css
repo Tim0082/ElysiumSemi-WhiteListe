@@ -1,4 +1,4 @@
-/* --- TABS --- */
+/* TABS */
 .tabs {
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@
   background: #b81c1c; /* bouton actif en rouge */
 }
 
-/* --- PANELS --- */
+/* PANELS */
 .tab-panel {
   display: none;
   padding: 20px;
@@ -34,7 +34,7 @@
   display: block;
 }
 
-/* --- GRID JOBS --- */
+/* GRID JOBS */
 .jobs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -48,11 +48,6 @@
   text-align: center;
   color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  transition: transform 0.2s;
-}
-
-.job-card:hover {
-  transform: scale(1.03);
 }
 
 .job-card img {
@@ -79,9 +74,4 @@
   border-radius: 5px;
   font-size: 13px;
   text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn.small:hover {
-  background: #e02e2e;
 }
