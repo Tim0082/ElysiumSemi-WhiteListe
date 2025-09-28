@@ -4,34 +4,33 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 20px 0;
-  gap: 10px;
+  gap: 8px;
 }
 
 .tab-btn {
-  padding: 10px 18px;
+  padding: 8px 16px;
   border: none;
-  border-radius: 8px;
-  background: #222;
-  color: #fff;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #eee;
   cursor: pointer;
+  font-size: 14px;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .tab-btn:hover {
-  background: #333;
-  transform: translateY(-2px);
+  background: #3a3a3a;
 }
 
 .tab-btn.active {
-  background: #b81c1c;
-  box-shadow: 0 0 10px rgba(184,28,28,0.6);
+  background: #444;
 }
 
 /* PANELS */
 .tab-panel {
   display: none;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .tab-panel.active {
@@ -41,67 +40,60 @@
 /* JOBS GRID */
 .jobs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .job-card {
-  background: linear-gradient(145deg, #1a1a1a, #222);
-  padding: 20px;
-  border-radius: 12px;
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 10px;
   text-align: center;
   color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 }
 
 .job-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(184,28,28,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
 .job-card img {
-  max-width: 120px;
-  margin-bottom: 15px;
-  transition: 0.3s;
-}
-
-.job-card:hover img {
-  transform: scale(1.05);
+  max-width: 90px;
+  margin-bottom: 10px;
+  border-radius: 6px;
 }
 
 .job-card h3 {
-  margin: 10px 0;
-  font-size: 20px;
-  color: #fff;
+  margin: 8px 0;
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  color: #f5f5f5;
 }
 
 .job-card p {
-  font-size: 14px;
-  color: #bbb;
-  line-height: 1.5;
-  margin-bottom: 12px;
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.4;
+  margin-bottom: 8px;
 }
 
 /* BUTTONS */
 .btn.small {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 14px;
-  font-size: 14px;
+  margin-top: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
   font-weight: 500;
-  border-radius: 6px;
-  background: #b81c1c;
-  color: #fff;
+  border-radius: 5px;
+  background: #333;
+  color: #eee;
   text-decoration: none;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 }
 
 .btn.small:hover {
-  background: #e02e2e;
-  box-shadow: 0 5px 12px rgba(224,46,46,0.5);
+  background: #555;
 }
